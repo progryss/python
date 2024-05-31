@@ -84,30 +84,140 @@
 
 #practice - create a account class with 2 attributes - balance and account number. Create methods for debit, credit and printing the balance
 
-class Account:
-    def __init__(self, account, balance):
-        self.account = account
-        self.balance = balance
+# class Account:
+#     def __init__(self, account, balance):
+#         self.account = account
+#         self.balance = balance
     
-    #debit
-    def debit(self, amount):
-        self.balance -= amount
-        print("Rs.", amount , "Debited from the account")
-        print("current amount in the acccount is ", self.balance)
-    #credit
-    def credit(self, amount):
-        self.balance += amount
-        print("Rs.", amount, "credit in the account")
-        print("current amount in the acccount is ", self.balance)
+#     #debit
+#     def debit(self, amount):
+#         self.balance -= amount
+#         print("Rs.", amount , "Debited from the account")
+#         print("current amount in the acccount is ", self.balance)
+#     #credit
+#     def credit(self, amount):
+#         self.balance += amount
+#         print("Rs.", amount, "credit in the account")
+#         print("current amount in the acccount is ", self.balance)
 
-    def balance(self):
-        return self.balance
+#     def balance(self):
+#         return self.balance
 
 
-acc1 = Account(1235, 10000)
-acc1.debit(500)
-acc1.credit(1500)
+# acc1 = Account(1235, 10000)
+# acc1.debit(500)
+# acc1.credit(1500)
 
+
+#del keyword - used to delete object properties or object itself
+
+# class Student:
+#     def __init__(self, name):
+#         self.name = name
+
+# s1 = Student("Sujeet")
+# s2 = Student("Kumar")
+# print(s1.name, s2.name)
+# del s1.name
+# print(s2.name)
+
+#Private (like) attribute & method
+#conceptual implementaion in python
+#Private attribute & methods are meant to be used only within the class and are not accessible from outside the class
+
+#attribute private
+# class Account:
+#     def __init__(self, acc_no, acc_pass):
+#         self.acc_no = acc_no
+#         self.__acc_pass = acc_pass #__ to private (attribute)
+#     def reset(self):
+#         print(self.__acc_pass)
+
+
+# acc1 = Account("12345", "abc55sdjdsj")
+# print(acc1.acc_no)
+# print(acc1.reset())
+# print(acc1.acc_pass)
+
+#method private
+
+# class Persone:
+#     name = "Any name"
+#     def __hello(self): #__ to private the method
+#         print("Hello Person")
+#     def welcome(self):
+#         self.__hello
+
+# p1 = Persone()
+# print(p1.welcome)
+# print(p1.__hello())
+
+#inheritance: when one class(child/derived) derives the properties & method of another class (parent/base)
+
+#types of inheritance - Single, multi-leve, multiple
+
+#single inheritance
+# class Car:
+#     @staticmethod
+#     def start():
+#         print("Car Started...")
+#     @staticmethod
+#     def stop():
+#         print("Car Stopped..")
+
+# class Merc(Car):
+#     def __init__(self, name):
+#         self.name = name
+
+# car1 = Merc("Merc")
+# print(car1.name)
+# print(car1.start())
+# print(car1.stop())
+
+#Multi level inheritance
+
+# class Car:
+#     @staticmethod
+#     def start():
+#         print("Car Started...")
+#     @staticmethod
+#     def stop():
+#         print("Car stopped...")
+
+# class Merc(Car):
+#     def __init__(self, brand):
+#         self.brand = brand
+
+# class GLS(Merc):
+#     def __init__(self,type):
+#         self.type = type
+
+# car1 = GLS("Diesel")
+
+# print(car1.type)
+# car1.start()
+# car1.stop()
+
+#Multiple Inheritance
+
+# class A:
+#     varA = "welcome to class A"
+
+# class B:
+#     varB = "welcome to class B"
+
+# class C(A,B):
+#     varC = "Welecome to classs C"
+
+# c1= C()
+
+# print(c1.varC)
+# print(c1.varA)
+# print(c1.varB)
+
+#Super Method - super() method is used to access method of the parent class
+
+#POLYMORPHISM : when same operator is allowed to have different meaning according to the context
 
 
 
