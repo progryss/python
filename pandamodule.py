@@ -94,10 +94,10 @@ gp1 = data.groupby(["Make", "Start Year"]).agg({"Model": "count"}) #groupby data
 
 #Pivoting and melting data frames
 
-dict = {"Keys": ["K1", "K2", "K1", "K2"],
-        "Names": ["John", "Peter", "Ben", "David"],
-        "House": ["Blue", "Red", "Blue", "Green"]
-        }
-df = pd.DataFrame(dict)
-print(df)
-print(df.pivot("Keys", "Names", "House"))
+# dict = {"Keys": ["K1", "K2", "K1", "K2"],
+#         "Names": ["John", "Peter", "Ben", "David"],
+#         "House": ["Blue", "Red", "Blue", "Green"]
+#         }
+# df = pd.DataFrame(dict)
+# print(df)
+# print(df.pivot("Keys", "Names", "House"))
